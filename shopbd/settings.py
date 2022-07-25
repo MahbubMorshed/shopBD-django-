@@ -14,6 +14,7 @@ from django.contrib.messages import constants as messages
 from pathlib import Path
 from decouple import config
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,14 +97,24 @@ AUTH_USER_MODEL = 'accounts.Account'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'shopbd',
+#         'USER': 'postgres',
+#         'PASSWORD': 'O1!neT2@wo',
+#         'HOST': 'localhost',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shopbd',
-        'USER': 'postgres',
-        'PASSWORD': 'O1!neT2@wo',
-        'HOST': 'localhost',
-        'HOST': 'localhost',
+        'NAME': 'dd88jkkm5chr79',
+        'USER': 'kihmmuodnqlrdn',
+        'PASSWORD': 'd41eed4863f6a5b72be8d20e2dc7c6dc659bb787a011bb7efbf0605808dac38c',
+        'HOST': 'ec2-44-206-197-71.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -149,6 +160,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+django_heroku.settings(locals())
 # STATIC_ROOT = BASE_DIR / 'static'
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'static',
