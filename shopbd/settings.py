@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 #config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['shhopbd.herokuapp.com/']
+ALLOWED_HOSTS = ['shhopbd.herokuapp.com']
 
 
 # Application definition
